@@ -6,9 +6,9 @@ input_dir <- "data/input"
 output_dir <- "data/output"
 
 clin = read.csv( file.path(input_dir, "CLIN.txt"), stringsAsFactors=FALSE , sep="\t" )
-rownames(clin) = clin$geo_accession
+rownames(clin) = clin$patientid
 
-patient = sort( unique( clin$geo_accession ) )
+patient = sort( unique( clin$patientid ) )
 
 case = as.data.frame( cbind( patient , rep( 0 , length(patient) ) , rep( 0 , length(patient) ) , rep( 1 , length(patient) ) ) )
 colnames(case) = c( "patient" , "snv" , "cna" , "expr" )
