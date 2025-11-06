@@ -65,6 +65,6 @@ get_MultiAssayExp <- function(study, input_dir, expr_with_counts_isoforms=FALSE)
 
 ## get MAE object
 
-dat <- get_MultiAssayExp(study = "Foy_Lung", output_dir, expr_with_counts_isoforms=FALSE)
-saveRDS(dat, file=file.path(output_dir, "ICB_Foy_Lung.rds"))
+dat <- get_MultiAssayExp(study = "Rose", output_dir, expr_with_counts_isoforms=FALSE)
+saveRDS(dat, file=file.path(output_dir, "ICB_Rose.rds"))
 
